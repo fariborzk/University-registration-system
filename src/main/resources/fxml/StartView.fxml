@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StartController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="443.0" layoutY="27.0" prefHeight="43.0" prefWidth="132.0" text="Welcome" />
+      <Label alignment="CENTER" layoutX="431.0" layoutY="105.0" prefHeight="43.0" prefWidth="161.0" text="Please choose your mode" />
+      <TextField fx:id="usernameField" layoutX="429.0" layoutY="406.0" promptText="Username" />
+      <RadioButton fx:id="departmentRadio" layoutX="423.0" layoutY="299.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="199.0" text="department officer mode">
+         <toggleGroup>
+            <ToggleGroup fx:id="modeGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="professorRadio" layoutX="422.0" layoutY="257.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="175.0" text="Professor mode" toggleGroup="$modeGroup" />
+      <RadioButton fx:id="godRadio" layoutX="422.0" layoutY="171.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="175.0" text="God mode" toggleGroup="$modeGroup" />
+      <RadioButton fx:id="studentRadio" layoutX="422.0" layoutY="214.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="175.0" text="Student mode" toggleGroup="$modeGroup" />
+      <Button contentDisplay="BOTTOM" layoutX="450.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#start" prefHeight="43.0" prefWidth="147.0" text="Start " textAlignment="CENTER" />
+      <Button contentDisplay="BOTTOM" layoutX="450.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="43.0" prefWidth="147.0" text="Exit" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="411.0" layoutY="366.0" prefHeight="26.0" prefWidth="224.0" text="Please enter your username" />
+   </children>
+</AnchorPane>

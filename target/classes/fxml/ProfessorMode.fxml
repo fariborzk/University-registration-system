@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="722.0" prefWidth="1224.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProfessorController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="24.0" prefHeight="33.0" prefWidth="187.0" text="your courses" textFill="#1d1abc">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="courseBar" layoutX="34.0" layoutY="57.0" pannable="true" prefHeight="304.0" prefWidth="281.0">
+         <content>
+            <VBox prefHeight="31.0" prefWidth="447.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="414.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="130.0" style="-fx-position-shape: stiky" text="course name" />
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="130.0" style="-fx-position-shape: stiky" text="department id" />
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="90.0" style="-fx-position-shape: stiky" text="credits" />
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-position-shape: stiky" text="professor name" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="357.0" layoutY="24.0" prefHeight="33.0" prefWidth="281.0" text="department professors" textFill="#1d1abc">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="departmentProfessors" layoutX="347.0" layoutY="57.0" pannable="true" prefHeight="304.0" prefWidth="281.0">
+         <content>
+            <VBox>
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="400.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="164.0" style="-fx-position-shape: stiky" text="professor name" />
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="151.0" style="-fx-position-shape: stiky;" text="department id" />
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="130.0" text="birthday" />
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-position-shape: stiky" text="rank" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="courseName" layoutX="86.0" layoutY="390.0" prefHeight="31.0" prefWidth="187.0" promptText="enter your course name" />
+      <TextField fx:id="credits" layoutX="88.0" layoutY="464.0" prefHeight="31.0" prefWidth="187.0" promptText="enter credits" />
+      <Label alignment="CENTER" layoutX="118.0" layoutY="431.0" prefHeight="33.0" prefWidth="123.0" text="enter credis" textFill="#1d1abc">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="113.0" layoutY="369.0" prefHeight="21.0" prefWidth="123.0" text="course name" textFill="#1d1abc" />
+      <Button layoutX="118.0" layoutY="535.0" mnemonicParsing="false" onMouseClicked="#getAddCourse" prefHeight="31.0" prefWidth="123.0" text="Add" />
+      <ScrollPane fx:id="editBar" layoutX="649.0" layoutY="57.0" pannable="true" prefHeight="304.0" prefWidth="310.0">
+         <content>
+            <VBox>
+               <children>
+                  <HBox prefHeight="31.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="110.0" style="-fx-position-shape: stiky" text="student id" />
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="130.0" style="-fx-position-shape: stiky" text="course name" />
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="70.0" text="status" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label fx:id="gradeLab" alignment="CENTER" contentDisplay="CENTER" layoutX="649.0" layoutY="24.0" prefHeight="33.0" prefWidth="310.0" text="Delete or add student from course" textFill="#1d1abc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="editCourseName" layoutX="649.0" layoutY="464.0" prefHeight="31.0" prefWidth="310.0" promptText="Enter course name " />
+      <TextField fx:id="editStudentId" layoutX="649.0" layoutY="400.0" prefHeight="31.0" prefWidth="310.0" promptText="Enter student id" />
+      <Label alignment="CENTER" layoutX="649.0" layoutY="436.0" prefHeight="21.0" prefWidth="310.0" text="course name" textAlignment="CENTER" textFill="#4706bf" />
+      <Label alignment="CENTER" layoutX="649.0" layoutY="372.0" prefHeight="21.0" prefWidth="310.0" text="student Id" textAlignment="CENTER" textFill="#4706bf" />
+      <Button layoutX="835.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#getAddStudent2Course" prefHeight="31.0" prefWidth="124.0" text="Add" />
+      <Button layoutX="649.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#getDeleteStudent" prefHeight="31.0" prefWidth="124.0" text="Delete" />
+      <Pane fx:id="info" layoutX="970.0" layoutY="4.0" prefHeight="411.0" prefWidth="228.0">
+         <children>
+            <ScrollPane fx:id="studentInfo" layoutX="14.0" layoutY="55.0" prefHeight="304.0" prefWidth="200.0">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox prefHeight="31.0" prefWidth="480.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="133.0" style="-fx-position-shape: stiky" text="student name" />
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="122.0" style="-fx-position-shape: stiky" text="id" />
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="139.0" style="-fx-position-shape: stiky" text="department id" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-position-shape: stiky" text="birthday" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="200.0" text="student info" textFill="#1d1abc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="71.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="31.0" prefWidth="86.0" text="close" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
